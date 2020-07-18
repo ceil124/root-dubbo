@@ -1,7 +1,6 @@
 package com.zhengyf.controller;
 
 import com.alibaba.dubbo.config.annotation.Reference;
-import com.zhengyf.domain.User;
 import com.zhengyf.service.TestService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
