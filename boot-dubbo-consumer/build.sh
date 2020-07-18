@@ -1,2 +1,2 @@
 #!/bin/bash
-docker build -t springcloud-consumer --no-cache .
+docker build -t dubbo-consumer --no-cache .

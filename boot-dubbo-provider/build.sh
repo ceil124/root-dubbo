@@ -1,2 +1,2 @@
 #!/bin/bash
-docker build -t springcloud-provider --no-cache .
+docker build -t dubbo-provider --no-cache .
