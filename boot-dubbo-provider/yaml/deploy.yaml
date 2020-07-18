@@ -1,0 +1,17 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: dubbo-provider-deployment
+spec:
+  template:
+    metadata:
+      labels:
+        app: dubbo-provider
+    spec:
+      containers:
+        - name: dubbo-provider
+          image: dubbo-provider
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 20880
+              protocol: TCP

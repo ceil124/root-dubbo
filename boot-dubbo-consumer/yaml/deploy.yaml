@@ -1,0 +1,30 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: dubbo-consumer-deployment
+spec:
+  template:
+    metadata:
+      labels:
+        app: dubbo-consumer
+    spec:
+      containers:
+        - name: dubbo-consumer
+          image: dubbo-consumer
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8080
+              protocol: TCP
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: dubbo-consumer
+spec:
+  selector:
+    app: dubbo-consumer
+  ports:
+    - port: 8080
+      targetPort: 8080
+      nodePort: 31002
+  type: NodePort
